@@ -165,3 +165,12 @@ if is_play $BUILD_DIR ; then
   rm -rf $BUILD_DIR/modules/ads/target/staged
 fi
 
+#drop staged file on submodules
+if is_play $BUILD_DIR ; then
+  echo "-----> Dropping staged module files from the slug"
+  rm -rf $BUILD_DIR/modules/common/target/universal/stage/lib
+  rm -rf $BUILD_DIR/modules/box/target//universal/stage/lib
+  rm -rf $BUILD_DIR/modules/admin/target/universal/stage/lib
+  rm -rf $BUILD_DIR/modules/ads/target/universal/stage/lib
+fi
+
