@@ -7,7 +7,8 @@ object HerokuPlugin extends Plugin {
       Seq(Resolver.defaultLocal) ++ appResolvers ++
       Seq(Resolver.url("heroku-sbt-typesafe") artifacts "http://s3pository.heroku.com/ivy-typesafe-releases/[organization]/[module]/[revision]/[type]s/[artifact](-[classifier]).[ext]",
           "heroku-central" at "http://s3pository.heroku.com/maven-central/",
-          "typesafe" at "http://repo.typesafe.com/typesafe/repo/")
+          "typesafe" at "http://repo.typesafe.com/typesafe/repo/",
+          "maven-central" at "http://repo1.maven.org/maven2")
     },
     sources in doc in Compile := List()
   )
