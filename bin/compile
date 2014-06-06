@@ -158,14 +158,11 @@ fi
 #drop staged file on submodules
 if is_play $BUILD_DIR ; then
   echo "-----> Dropping staged files from the modules folders"
-  rm -rf $BUILD_DIR/modules/common/target/universal/stage/lib
-  rm -rf $BUILD_DIR/modules/box/target/universal/stage/lib
-  rm -rf $BUILD_DIR/modules/admin/target/universal/stage/lib
-  rm -rf $BUILD_DIR/modules/ads/target/universal/stage/lib
-  rm -rf $BUILD_DIR/modules/common/target/staged
-  rm -rf $BUILD_DIR/modules/box/target/staged
-  rm -rf $BUILD_DIR/modules/admin/target/staged
-  rm -rf $BUILD_DIR/modules/ads/target/staged
+  rm -rf $BUILD_DIR/modules/common/target
+  rm -rf $BUILD_DIR/modules/box/target
+  rm -rf $BUILD_DIR/modules/admin/target
+  rm -rf $BUILD_DIR/modules/ads/target
+
 fi
 
 # Move compiled app back to where Heroku expects it
